@@ -34,4 +34,4 @@ Content-Type: application/json
    "email": "laversi@gmail.com"   
 }
 
-//
+// 5 - Get All Posts
