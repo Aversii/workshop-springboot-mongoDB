@@ -33,5 +33,9 @@ Content-Type: application/json
    "name": "laversi", 
    "email": "laversi@gmail.com"   
 }
+###
 
-// 5 - Get All Posts
+// 5 - Get Posts By Author Id
+GET http://localhost:8080/users/3/posts
+Content-Type: application/json
+
