@@ -1,0 +1,37 @@
+//_________________________________________ USER ENDPOINTS ______________________________________//
+
+//1 - Create New User
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+   "name": "chico", 
+   "email": "butico@gmail.com"   
+}
+
+###
+
+// 2 - Get All Users
+GET http://localhost:8080/users
+Content-Type: application/json
+
+
+###
+
+// 3 - Get User By Id
+
+GET http://localhost:8080/users/6497b736db0a8841f0e37bef
+Content-Type: application/json
+
+###
+
+// 4 - Update User by Id
+PUT http://localhost:8080/users/6497b736db0a8841f0e37bef
+Content-Type: application/json
+
+{
+   "name": "laversi", 
+   "email": "laversi@gmail.com"   
+}
+
+//
