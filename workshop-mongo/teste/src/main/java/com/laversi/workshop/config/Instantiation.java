@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.laversi.workshop.domain.Post;
 import com.laversi.workshop.domain.User;
+import com.laversi.workshop.dto.AuthorDTO;
 import com.laversi.workshop.repository.PostRepository;
 import com.laversi.workshop.repository.UserRepository;
 
@@ -35,9 +36,9 @@ public class Instantiation implements CommandLineRunner {
         User manoela = new User("2", "Manoela", "manoela@gmail.com");
         User yuri = new User("3", "Yuri", "yuri@gmail.com");
 
-        Post post1 = new Post(null, sdf.parse("23/01/2018"), "Partiu Viagem", "Fui para Tangamandápio",pedro);
-        Post post2 = new Post(null, sdf.parse("23/05/2018"), "Partiu Trabalho", "Fui para o Trabalho =/",pedro);
-        Post post3 = new Post(null, sdf.parse("25/12/2018"), "Partiu Natal", "Fui para o polo norte",yuri);
+        Post post1 = new Post(null, sdf.parse("23/01/2018"), "Partiu Viagem", "Fui para Tangamandápio",new AuthorDTO(pedro));
+        Post post2 = new Post(null, sdf.parse("23/05/2018"), "Partiu Trabalho", "Fui para o Trabalho =/",new AuthorDTO(pedro));
+        Post post3 = new Post(null, sdf.parse("25/12/2018"), "Partiu Natal", "Fui para o polo norte",new AuthorDTO(yuri));
 
                
         userRepo.saveAll(Arrays.asList(pedro, manoela, yuri));
